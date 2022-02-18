@@ -1,0 +1,180 @@
+.accommodations {
+  margin-top: 2rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 2fr 1fr;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
+  }
+
+  &__item {
+    background-color: $color-gray;
+    border-radius: 2rem;
+    padding: 4rem;
+  }
+}
+
+.order2 {
+  @media screen and (max-width: 768px) {
+    order: 2;
+  }
+}
+
+.order1 {
+  @media screen and (max-width: 768px) {
+    order: 1;
+  }
+}
+
+.item {
+  background-color: #fff;
+  border-radius: 3rem;
+  overflow: hidden;
+  border: 0.5rem solid #fff;
+
+  @include shadow;
+
+  &__gore {
+    height: 15rem;
+    background-image: url("/images/hebergements/4_small/gore-levo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(2) {
+    .item__gore {
+      background-image: url("/images/hebergements/4_small/gore-sredina.jpg");
+    }
+
+    .item__levo {
+      background-image: url("/images/hebergements/4_small/sredina.jpg");
+    }
+  }
+  &:nth-child(3) {
+    .item__gore {
+      background-image: url("/images/hebergements/4_small/gore-desno.jpg");
+    }
+
+    .item__levo {
+      background-image: url("/images/hebergements/4_small/dole.jpg");
+    }
+  }
+  &:nth-child(4) {
+    .item__gore {
+      background-image: url("/images/hebergements/4_small/dole-levo.jpg");
+    }
+  }
+  &:nth-child(5) {
+    .item__gore {
+      background-image: url("/images/hebergements/4_small/dole-sredina.jpg");
+    }
+  }
+  &:nth-child(6) {
+    .item__gore {
+      background-image: url("/images/hebergements/4_small/dole-desno.jpg");
+    }
+  }
+
+  &__dole {
+    padding: 1.2rem;
+  }
+
+  &__h3 {
+    font-size: 1.4rem;
+  }
+
+  &__p {
+    margin: 0.8rem 0;
+    font-size: 1.4rem;
+  }
+
+  &__levo {
+    width: 15rem;
+    height: 15rem;
+    background-image: url("/images/hebergements/4_small/gore.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__desno {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.4rem;
+  }
+
+  &-flex {
+    display: flex;
+  }
+}
+
+.left {
+  @media screen and (max-width: 768px) {
+    background-color: #fff;
+  }
+  &__h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__images {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__h3 {
+    font-size: 1.6rem;
+    margin-top: 4rem;
+
+    &-a {
+      transition: all 0.5s;
+    }
+
+    &-a:link,
+    &-a:visited {
+      color: #000;
+      text-decoration: none;
+    }
+
+    &-a:hover,
+    &-a:active {
+      color: $color-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.right {
+  &__gore {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__h2 {
+    font-size: 2.2rem;
+  }
+
+  &__ikona {
+    font-size: 1.8rem;
+  }
+
+  &__button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__items {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 2rem;
+  }
+}

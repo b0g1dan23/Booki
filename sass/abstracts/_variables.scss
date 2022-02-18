@@ -1,0 +1,27 @@
+$color-blue: #0065fc;
+$color-light-blue: #deebff;
+$color-gray: #f2f2f2;
+$color-light-black: #393939;
+$color-black: #000;
+$gap: 3rem;
+
+@mixin shadow {
+  -webkit-box-shadow: 6px 9px 20px -6px rgba(0, 0, 0, 0.66);
+  box-shadow: 6px 9px 20px -6px rgba(0, 0, 0, 0.66);
+}
+
+@mixin dole {
+  &__dole {
+    height: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+  }
+}
+
+@mixin bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
